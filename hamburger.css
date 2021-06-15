@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before{
+    box-sizing:border-box;
+    
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+/* State check karni*/
+/* agar check box click hai toh select krna hai menu items nd show krna h*/
+
+.menu-items{
+   
+    padding-top: 50px;
+    transform: translateX(-110%);
+    transition: transform 0.5s ease-in-out;
+    padding-left: 10px;
+}
+.menu-items li{
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+.hamburger-menu input[type="checkbox"]:checked~.menu-items{
+   
+    transform:translateX(0%);
+
+}
+.hamburger-menu{
+    border :2px solid red;
+    position: relative;
+}
+.hamburger-menu input{
+  
+  width:40px;
+  height:32px;
+  position:absolute;
+  top:5px;
+  left:5px;
+  z-index: 1;
+  opacity: 0;
+}
+.hamburger-lines{
+    width:40px;
+    height:32px;
+    position: absolute;
+    
+    top:8px;
+    left:7px;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hamburger-lines .line{
+    display: block;
+    height:4px;
+    width:100%;
+    background: black;
+    border-radius: 10px;
+}
+li{
+    list-style: none;
+}
